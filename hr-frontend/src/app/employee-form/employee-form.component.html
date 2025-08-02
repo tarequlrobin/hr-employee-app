@@ -1,0 +1,11 @@
+<h2>{{ isEdit ? 'Edit' : 'Add' }} Employee</h2>
+
+<form (ngSubmit)="onSubmit()" #empForm="ngForm">
+  <label>First Name: <input [(ngModel)]="employee.firstName" name="firstName" required /></label><br />
+  <label>Last Name: <input [(ngModel)]="employee.lastName" name="lastName" required /></label><br />
+  <label>Title: <input [(ngModel)]="employee.title" name="title" /></label><br />
+  <label>Division: <input [(ngModel)]="employee.division" name="division" /></label><br />
+  <label>Building: <input [(ngModel)]="employee.building" name="building" /></label><br />
+  <label>Room: <input [(ngModel)]="employee.room" name="room" /></label><br />
+  <button type="submit">{{ isEdit ? 'Update' : 'Create' }}</button>
+</form>
